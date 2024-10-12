@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url(card-slider-images-24-07-05/images/bg.jpg) #030728 no-repeat center;
+}
+
+.slider-wrapper {
+    overflow: hidden;
+    max-width: 800px; /* Set a max width for the medium box */
+    width: 100%; /* Allow it to be responsive */
+    margin: 0 20px; /* Adjusted margin for better responsiveness */
+    position: relative; /* Position relative for pagination and buttons */
+}
+
+.card-list {
+    display: flex;
+}
+
+.card-item {
+    color: #fff;
+    user-select: none;
+    padding: 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    backdrop-filter: blur(30px);
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    margin: 0 10px; 
+    transition: transform 0.3s;
+    flex: 0 0 auto; /* Prevent flex items from shrinking */
+}
+
+.card-item:hover {
+    transform: scale(1.05); 
+}
+
+.user-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px; 
+    border: 3px solid #fff;
+    padding: 4px;
+}
+
+.user-name {
+    font-size: 1.5rem; 
+    margin: 10px 0; 
+}
+
+.user-profession {
+    font-size: 1.1rem; 
+    color: #e3e3e3;
+    font-weight: 500;
+    margin: 10px 0 20px; 
+}
+
+.message-button {
+    font-size: 1.25rem;
+    padding: 10px 20px; 
+    color: #030728;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid transparent;
+}
+
+.message-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.slider-wrapper .swiper-pagination-bullet {
+    background: #fff;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px; 
+}
+
+/* Add styles for navigation buttons */
+.swiper-button-prev, .swiper-button-next {
+    color: #fff; /* Button color */
+}
+
+.swiper-button-prev:hover, .swiper-button-next:hover {
+    color: #e3e3e3; /* Hover color */
+}
+
+/* Additional styles for specific images */
+.card-item:nth-child(5) .user-image {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.card-item:nth-child(6) .user-image {
+    border: 4px solid #ffcc00; /* Golden border */
+    transition: transform 0.3s;
+}
+
+.card-item:nth-child(6) .user-image:hover {
+    transform: scale(1.1); /* Scale effect on hover */
+}
